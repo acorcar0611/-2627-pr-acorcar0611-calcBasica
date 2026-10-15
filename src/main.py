@@ -46,7 +46,8 @@ def dividir(num1: float, num2: float) -> float:
 
     if num2 == 0:
         print("No se puede realizar la operación")
-        print(f"División: {dividir}")
+        return 0.0
+
     res = num1 / num2
     return res
 
@@ -56,7 +57,10 @@ def main():
     print(f"Suma: {sumar(num1,num2):.1f}")
     print(f"Resta: {restar(num1,num2):.1f}")
     print(f"Multiplicación: {multiplicar(num1,num2):.1f}")
-    print(f"División: {dividir(num1, num2):.1f}")
-
+    
+    if num2 == 0:
+        print("División: No se puede realizar la operación")
+    else:
+        print(f"División: {dividir(num1, num2):.1f}")
 if __name__ == "__main__":
     main()
